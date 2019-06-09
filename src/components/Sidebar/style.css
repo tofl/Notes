@@ -1,0 +1,11 @@
+.sidebar {
+    border-right: 1px solid grey;
+    width: 30vw;
+    height: 100vh;
+}
+
+li {
+    border: 1px solid red;
+    padding: 10px;
+    height: 50px;
+}
