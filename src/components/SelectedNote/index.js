@@ -1,5 +1,4 @@
 import React from 'react';
-
 // Custom imports
 import './../../services/getCookieByName';
 import getCookieByName from "../../services/getCookieByName";
