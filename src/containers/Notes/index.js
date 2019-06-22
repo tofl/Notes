@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Custom imports
 import Sidebar from './../../components/Sidebar';
@@ -25,8 +25,10 @@ class Notes extends Component {
 			<div className="main">
 				<BrowserRouter>
 					<Sidebar notes={ this.state.notes } />
-					<Route exact path="/" component={ NoNoteSelected } />
-					<Route path="/:id" component={ SelectedNote } />
+					<Switch>
+						<Route exact path="/" component={ NoNoteSelected } />
+						<Route path="/:id" component={ SelectedNote } />
+					</Switch>
 				</BrowserRouter>
 			</div>
 		);

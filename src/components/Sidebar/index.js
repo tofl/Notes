@@ -8,13 +8,13 @@ const Sidebar = props => {
 	if (props.notes) {
 		return (
 			<div className="sidebar">
-				<ul>
-					{
-						props.notes.map((note, index) => (
-							<li key={index}><Link to={"/" + index}>{note.name}</Link></li>
-						))
-					}
-				</ul>
+					<ul>
+						{
+							props.notes.map((note, index) => (
+								<li key={index}><Link to={"/" + index}>{note.name}</Link></li>
+							))
+						}
+					</ul>
 			</div>
 		);
 	}
