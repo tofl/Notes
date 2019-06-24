@@ -20,6 +20,10 @@ class Notes extends Component {
 		}
 	}
 	
+	updateCookie(e) {
+		console.log(e)
+	}
+	
 	render() {
 		return (
 			<div className="main">
@@ -27,7 +31,7 @@ class Notes extends Component {
 					<Sidebar notes={ this.state.notes } />
 					<Switch>
 						<Route exact path="/" component={ NoNoteSelected } />
-						<Route path="/:id" component={ SelectedNote } />
+						<Route path="/:id" render={ (props) => <SelectedNote {...props} updateName={ this.updateCookie } /> } />
 					</Switch>
 				</BrowserRouter>
 			</div>

@@ -17,6 +17,7 @@ const Sidebar = props => {
 					</ul>
 			</div>
 		);
+		
 	}
 	
 	return(
