@@ -14,14 +14,22 @@ class Notes extends Component {
 		notes: null
 	};
 	
+	constructor(props) {
+		super(props);
+		
+		this.updateCookie = this.updateCookie.bind(this);
+	}
+	
 	componentDidMount() {
 		if (getCookieByName("notes") !== '') {
 			this.setState({ notes: JSON.parse(getCookieByName("notes"))});
 		}
 	}
 	
-	updateCookie(e) {
-		console.log(e)
+	updateCookie() {
+		if (getCookieByName("notes") !== '') {
+			this.setState({ notes: JSON.parse(getCookieByName("notes"))});
+		}
 	}
 	
 	render() {

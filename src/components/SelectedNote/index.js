@@ -33,7 +33,6 @@ class SelectedNote extends Component {
 		updatedCookie[this.props.match.params.id] = updatedNote;
 		
 		document.cookie = 'notes=' + JSON.stringify(updatedCookie);
-		console.log(JSON.stringify(updatedCookie));
 		
 		
 		// Update the state
@@ -44,6 +43,8 @@ class SelectedNote extends Component {
 		
 		
 		// Inform the parent component about the change
+		this.props.updateName();
+		
 		// Make the parent inform the sidebar
 		
 		
